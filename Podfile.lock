@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - Decodable (0.5)
+  - Ecno (1.0.0)
+  - Eureka (3.1.0)
+  - Material (2.8.1):
+    - Material/Core (= 2.8.1)
+  - Material/Core (2.8.1)
+  - OperaSwift (2.0.0):
+    - Alamofire (~> 4.4.0)
+    - RxCocoa (~> 3.4.0)
+    - RxSwift (~> 3.4.0)
+  - R.swift (3.3.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
+  - RxCocoa (3.4.1):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.4.1)
+  - SwiftDate (4.1.7)
+  - Whisper (5.0.0)
+  - XLSwiftKit (2.0.1)
+
+DEPENDENCIES:
+  - Charts (~> 3.0.2)
+  - Decodable (~> 0.5)
+  - Ecno (~> 1.0)
+  - Eureka (~> 3.1.0)
+  - Material (~> 2.8.1)
+  - OperaSwift (~> 2.0)
+  - R.swift (~> 3.3.0)
+  - RxCocoa (~> 3.4)
+  - SwiftDate (~> 4.1.6)
+  - Whisper (~> 5.0.0)
+  - XLSwiftKit (~> 2.0)
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  Decodable: 7c90acc68d357b71d0d6efc120faf9c53c644b7e
+  Ecno: 196d1beec86a9177076dbae61393de452bbf34cc
+  Eureka: d6725c38d0dcdceaa331d1468f75e76315715ae0
+  Material: cc27757e6c91999ac41b2089769106a9d83364c0
+  OperaSwift: c545476deab7a43dab1ca6a273bdb6f79382688f
+  R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  SwiftDate: 029be76691ee89176da3a46c7df3415b6734bc5b
+  Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
+  XLSwiftKit: aaf29528b340180a5d7b9c7e226c0e8fe188f3f5
+
+PODFILE CHECKSUM: 213867de41ec036e92d04af1842ef1c69b621bed
+
+COCOAPODS: 1.2.1

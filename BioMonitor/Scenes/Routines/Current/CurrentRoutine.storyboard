@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e43-qr-Vdd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Current Routine View Controller-->
+        <scene sceneID="OKZ-xK-ZfM">
+            <objects>
+                <viewController storyboardIdentifier="currentRoutineVC" modalPresentationStyle="currentContext" id="e43-qr-Vdd" customClass="CurrentRoutineViewController" customModule="BioMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hyc-9S-1lM"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZuE-pT-Gic"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ai1-ED-PFT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ias-Rr-ygu">
+                                <rect key="frame" x="-0.5" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current routine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnA-vX-zal">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icO-CB-2LS" customClass="LineChart" customModule="BioMonitor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1.5" width="375" height="645.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ias-Rr-ygu" firstAttribute="centerX" secondItem="ai1-ED-PFT" secondAttribute="centerX" id="5Or-p8-pWX"/>
+                            <constraint firstItem="Ias-Rr-ygu" firstAttribute="width" secondItem="ai1-ED-PFT" secondAttribute="width" id="U6R-iF-J1G"/>
+                            <constraint firstItem="Ias-Rr-ygu" firstAttribute="top" secondItem="Hyc-9S-1lM" secondAttribute="bottom" id="hrg-Rw-4QD"/>
+                            <constraint firstItem="ZuE-pT-Gic" firstAttribute="top" secondItem="Ias-Rr-ygu" secondAttribute="bottom" id="r8a-fG-5R6"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="chartView" destination="icO-CB-2LS" id="N8O-YU-yDP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY2-Lz-xur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="120"/>
+        </scene>
+    </scenes>
+</document>

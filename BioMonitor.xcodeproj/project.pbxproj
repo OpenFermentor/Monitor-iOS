@@ -12,6 +12,16 @@
 		1A2968481F36355500109E31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2968461F36355500109E31 /* Main.storyboard */; };
 		1A29684A1F36355500109E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2968491F36355500109E31 /* Assets.xcassets */; };
 		1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A29684B1F36355500109E31 /* LaunchScreen.storyboard */; };
+		1A790E4A1F374D98001FC8BB /* RouteTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E491F374D98001FC8BB /* RouteTypes.swift */; };
+		1A790E4C1F374DAD001FC8BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E4B1F374DAD001FC8BB /* Constants.swift */; };
+		1A790E4E1F374E1C001FC8BB /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E4D1F374E1C001FC8BB /* ServiceManager.swift */; };
+		1A790E551F375209001FC8BB /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E541F375209001FC8BB /* TabsViewController.swift */; };
+		1A790E571F3752F2001FC8BB /* RoutineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E561F3752F2001FC8BB /* RoutineListViewController.swift */; };
+		1A790E591F3753D7001FC8BB /* CurrentRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E581F3753D7001FC8BB /* CurrentRoutineViewController.swift */; };
+		1A790E5B1F37576D001FC8BB /* CurrentRoutine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A790E5A1F37576D001FC8BB /* CurrentRoutine.storyboard */; };
+		1A790E5D1F3759E0001FC8BB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E5C1F3759E0001FC8BB /* R.generated.swift */; };
+		1A790E601F375B6E001FC8BB /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E5F1F375B6E001FC8BB /* LineChart.swift */; };
+		4D267A92681C1F14017644AF /* Pods_BioMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF6B4A823ACA2D9D9A2A39F /* Pods_BioMonitor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,18 @@
 		1A2968491F36355500109E31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A29684C1F36355500109E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A29684E1F36355500109E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A790E491F374D98001FC8BB /* RouteTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouteTypes.swift; path = Networking/RouteTypes.swift; sourceTree = "<group>"; };
+		1A790E4B1F374DAD001FC8BB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A790E4D1F374E1C001FC8BB /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceManager.swift; path = Networking/ServiceManager.swift; sourceTree = "<group>"; };
+		1A790E541F375209001FC8BB /* TabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabsViewController.swift; path = Scenes/Navigation/TabsViewController.swift; sourceTree = "<group>"; };
+		1A790E561F3752F2001FC8BB /* RoutineListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineListViewController.swift; path = Scenes/Routines/List/RoutineListViewController.swift; sourceTree = "<group>"; };
+		1A790E581F3753D7001FC8BB /* CurrentRoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentRoutineViewController.swift; path = Scenes/Routines/Current/CurrentRoutineViewController.swift; sourceTree = "<group>"; };
+		1A790E5A1F37576D001FC8BB /* CurrentRoutine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CurrentRoutine.storyboard; path = Scenes/Routines/Current/CurrentRoutine.storyboard; sourceTree = "<group>"; };
+		1A790E5C1F3759E0001FC8BB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		1A790E5F1F375B6E001FC8BB /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = Scenes/Routines/Charts/LineChart.swift; sourceTree = "<group>"; };
+		4511027578F3D4BD1258E2DC /* Pods-BioMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BioMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BioMonitor/Pods-BioMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		82AB9DC565FDDEDE2015D01B /* Pods-BioMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BioMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-BioMonitor/Pods-BioMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		FAF6B4A823ACA2D9D9A2A39F /* Pods_BioMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BioMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D267A92681C1F14017644AF /* Pods_BioMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0981330D1C0DE6371D4B1CFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF6B4A823ACA2D9D9A2A39F /* Pods_BioMonitor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		105CEBCDBB1B9596DC6703FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4511027578F3D4BD1258E2DC /* Pods-BioMonitor.debug.xcconfig */,
+				82AB9DC565FDDEDE2015D01B /* Pods-BioMonitor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1A2968361F36355500109E31 = {
 			isa = PBXGroup;
 			children = (
 				1A2968411F36355500109E31 /* BioMonitor */,
 				1A2968401F36355500109E31 /* Products */,
+				105CEBCDBB1B9596DC6703FF /* Pods */,
+				0981330D1C0DE6371D4B1CFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +96,87 @@
 		1A2968411F36355500109E31 /* BioMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				1A2968421F36355500109E31 /* AppDelegate.swift */,
-				1A2968441F36355500109E31 /* ViewController.swift */,
-				1A2968461F36355500109E31 /* Main.storyboard */,
-				1A2968491F36355500109E31 /* Assets.xcassets */,
-				1A29684B1F36355500109E31 /* LaunchScreen.storyboard */,
-				1A29684E1F36355500109E31 /* Info.plist */,
+				1A790E5C1F3759E0001FC8BB /* R.generated.swift */,
+				1A75F4FA1F36893300D35E17 /* Networking */,
+				1A75F4F91F36891000D35E17 /* Scenes */,
+				1A75F4F81F3688F900D35E17 /* Support files */,
 			);
 			path = BioMonitor;
+			sourceTree = "<group>";
+		};
+		1A75F4F81F3688F900D35E17 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				1A29684B1F36355500109E31 /* LaunchScreen.storyboard */,
+				1A2968491F36355500109E31 /* Assets.xcassets */,
+				1A29684E1F36355500109E31 /* Info.plist */,
+				1A2968421F36355500109E31 /* AppDelegate.swift */,
+				1A790E4B1F374DAD001FC8BB /* Constants.swift */,
+			);
+			name = "Support files";
+			sourceTree = "<group>";
+		};
+		1A75F4F91F36891000D35E17 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1A75F4FD1F36898300D35E17 /* Routines */,
+				1A75F4FB1F36896E00D35E17 /* Navigation */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		1A75F4FA1F36893300D35E17 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1A790E491F374D98001FC8BB /* RouteTypes.swift */,
+				1A790E4D1F374E1C001FC8BB /* ServiceManager.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		1A75F4FB1F36896E00D35E17 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1A2968461F36355500109E31 /* Main.storyboard */,
+				1A2968441F36355500109E31 /* ViewController.swift */,
+				1A790E541F375209001FC8BB /* TabsViewController.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		1A75F4FD1F36898300D35E17 /* Routines */ = {
+			isa = PBXGroup;
+			children = (
+				1A790E5E1F375B54001FC8BB /* Charts */,
+				1A75F4FF1F36899500D35E17 /* List */,
+				1A75F4FE1F36898F00D35E17 /* Current */,
+			);
+			name = Routines;
+			sourceTree = "<group>";
+		};
+		1A75F4FE1F36898F00D35E17 /* Current */ = {
+			isa = PBXGroup;
+			children = (
+				1A790E581F3753D7001FC8BB /* CurrentRoutineViewController.swift */,
+				1A790E5A1F37576D001FC8BB /* CurrentRoutine.storyboard */,
+			);
+			name = Current;
+			sourceTree = "<group>";
+		};
+		1A75F4FF1F36899500D35E17 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1A790E561F3752F2001FC8BB /* RoutineListViewController.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		1A790E5E1F375B54001FC8BB /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				1A790E5F1F375B6E001FC8BB /* LineChart.swift */,
+			);
+			name = Charts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +186,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A2968511F36355500109E31 /* Build configuration list for PBXNativeTarget "BioMonitor" */;
 			buildPhases = (
+				FBB7C7E5AA8E7547DBB6060D /* [CP] Check Pods Manifest.lock */,
+				1A790E511F375071001FC8BB /* R.swift */,
 				1A29683B1F36355500109E31 /* Sources */,
 				1A29683C1F36355500109E31 /* Frameworks */,
 				1A29683D1F36355500109E31 /* Resources */,
+				A08DE371F31FFF5E731D2BCB /* [CP] Embed Pods Frameworks */,
+				D01CF695F812B5582ABD16FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */,
+				1A790E5B1F37576D001FC8BB /* CurrentRoutine.storyboard in Resources */,
 				1A29684A1F36355500109E31 /* Assets.xcassets in Resources */,
 				1A2968481F36355500109E31 /* Main.storyboard in Resources */,
 			);
@@ -131,13 +251,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A790E511F375071001FC8BB /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"\n";
+		};
+		A08DE371F31FFF5E731D2BCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BioMonitor/Pods-BioMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D01CF695F812B5582ABD16FF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BioMonitor/Pods-BioMonitor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB7C7E5AA8E7547DBB6060D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A29683B1F36355500109E31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1A2968451F36355500109E31 /* ViewController.swift in Sources */,
+				1A790E551F375209001FC8BB /* TabsViewController.swift in Sources */,
+				1A790E5D1F3759E0001FC8BB /* R.generated.swift in Sources */,
 				1A2968431F36355500109E31 /* AppDelegate.swift in Sources */,
+				1A790E601F375B6E001FC8BB /* LineChart.swift in Sources */,
+				1A790E571F3752F2001FC8BB /* RoutineListViewController.swift in Sources */,
+				1A790E4A1F374D98001FC8BB /* RouteTypes.swift in Sources */,
+				1A790E591F3753D7001FC8BB /* CurrentRoutineViewController.swift in Sources */,
+				1A790E4C1F374DAD001FC8BB /* Constants.swift in Sources */,
+				1A790E4E1F374E1C001FC8BB /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +448,11 @@
 		};
 		1A2968521F36355500109E31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4511027578F3D4BD1258E2DC /* Pods-BioMonitor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BioMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.openfermentor.BioMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,9 +462,11 @@
 		};
 		1A2968531F36355500109E31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82AB9DC565FDDEDE2015D01B /* Pods-BioMonitor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BioMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.openfermentor.BioMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +493,7 @@
 				1A2968531F36355500109E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

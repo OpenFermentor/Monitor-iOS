@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Material
 
 class ViewController: UIViewController {
 
@@ -21,5 +22,12 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController {
+    fileprivate func prepareTabItem() {
+        tabItem.title = "First"
+        tabItem.titleColor = Color.blueGrey.base
+    }
 }
 
