@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
+  - Birdsong (0.5.2):
+    - Starscream (= 2.0.1)
   - Charts (3.0.2):
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
@@ -19,11 +21,13 @@ PODS:
   - RxCocoa (3.4.1):
     - RxSwift (~> 3.4)
   - RxSwift (3.4.1)
+  - Starscream (2.0.1)
   - SwiftDate (4.1.7)
   - Whisper (5.0.0)
   - XLSwiftKit (2.0.1)
 
 DEPENDENCIES:
+  - Birdsong (~> 0.5.2)
   - Charts (~> 3.0.2)
   - Decodable (~> 0.5)
   - Ecno (~> 1.0)
@@ -38,6 +42,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Birdsong: 9ba3983693609813270fbb4aee5484abddc1ea30
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   Decodable: 7c90acc68d357b71d0d6efc120faf9c53c644b7e
   Ecno: 196d1beec86a9177076dbae61393de452bbf34cc
@@ -48,10 +53,11 @@ SPEC CHECKSUMS:
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  Starscream: ce7a202d95615bd4113bc5a0f1932f1db8c808a4
   SwiftDate: 029be76691ee89176da3a46c7df3415b6734bc5b
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
   XLSwiftKit: aaf29528b340180a5d7b9c7e226c0e8fe188f3f5
 
-PODFILE CHECKSUM: 213867de41ec036e92d04af1842ef1c69b621bed
+PODFILE CHECKSUM: 2935d75404052b6ebbd4f9adcde58cfa41e505b9
 
 COCOAPODS: 1.2.1

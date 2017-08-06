@@ -13,11 +13,13 @@ import Charts
 class CurrentRoutineViewController: UIViewController {
 
     @IBOutlet weak var chartView: LineChart!
+    let channel = RoutineChannel.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTabItem()
         chartView.setup()
+
     }
 }
 

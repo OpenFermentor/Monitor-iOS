@@ -14,5 +14,6 @@ target 'BioMonitor' do
   pod 'XLSwiftKit', '~> 2.0'
   pod 'SwiftDate', '~> 4.1.6'
   pod 'R.swift', '~> 3.3.0'
+  pod 'Birdsong', '~> 0.5.2'
 
 end
