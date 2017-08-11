@@ -14,13 +14,16 @@ class RoutineChannel {
 
     static let shared = RoutineChannel()
     let socket = Socket(url: Constants.Network.socketUrl)
+    var statusChannel: Channel?
+    var routineChannel: Channel?
     var error = Variable<String?>(nil)
-    var status = Variable<String?>(nil)
+    var status = Variable<Status?>(nil)
     var joinedRoutine = Variable<Bool>(false)
     var joinedSensors = Variable<Bool>(false)
     var alert = Variable<String?>(nil)
-    var update = Variable<String?>(nil)
+    var update = Variable<Reading?>(nil)
     var started = Variable<Bool>(false)
+    var lastReadings = Variable<[Reading]>([])
 
     init() {
         socket.onConnect = { [weak self] in
@@ -28,7 +31,7 @@ class RoutineChannel {
             self.connectToRoutineChannel()
             self.connectToStatusChannel()
         }
-
+        socket.connect()
     }
 
     func connectToStatusChannel() {
@@ -50,7 +53,11 @@ class RoutineChannel {
             print("Status received ============")
             print(status)
             print("============================")
-            self.status.value = status.payload.description
+            guard let newStatus = Status.from(data: status.payload) else {
+                self.status.value = nil
+                return
+            }
+            self.status.value = newStatus
         }
         channel.on("error") { error in
             print("Error received ============")
@@ -58,6 +65,7 @@ class RoutineChannel {
             print("============================")
             self.error.value = error.payload.description
         }
+        statusChannel = channel
     }
 
     func connectToRoutineChannel() {
@@ -76,21 +84,19 @@ class RoutineChannel {
             self.error.value = payload.description
         }
         channel.on("update") { update in
-            print("Update received ============")
-            print(update)
-            print("============================")
-            self.update.value = update.payload.description
+            guard let reading = Reading.from(data: update.payload) else {
+                self.status.value = nil
+                return
+            }
+            self.update.value = reading
+            self.addReading(reading: reading)
         }
         channel.on("started") { routine in
-            print("Start received ============")
-            print(routine)
-            print("============================")
+            self.lastReadings.value = []
             self.started.value = true
         }
         channel.on("stopped") { routine in
-            print("Stopped received ============")
-            print(routine)
-            print("============================")
+            self.lastReadings.value = []
             self.started.value = false
         }
         channel.on("alert") { alert in
@@ -99,5 +105,15 @@ class RoutineChannel {
             print("============================")
             self.alert.value = alert.payload.description
         }
+        routineChannel = channel
+    }
+
+    func addReading(reading: Reading) {
+        var readings = lastReadings.value
+        if readings.count >= 20 {
+            readings.remove(at: 0)
+        }
+        readings.append(reading)
+        lastReadings.value = readings
     }
 }
