@@ -30,4 +30,14 @@ class LineChart: LineChartView {
         return lineData
     }
 
+    func toTempDataEntries(readings: [Reading]) -> LineChartData {
+        let data = readings.map { ChartDataEntry(x: log2($0.insertedAt.timeIntervalSince1970), y: $0.temp)}
+        let dataSet = LineChartDataSet(values: data, label: "Temperature")
+        dataSet.mode = .cubicBezier
+        dataSet.setColor(Material.Color.amber.base)
+        dataSet.setCircleColor(Material.Color.amber.accent1)
+        let lineData = LineChartData(dataSet: dataSet)
+        return lineData
+    }
+
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7dL-B3-hmd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Routine List View Controller-->
+        <scene sceneID="d9k-RA-anB">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7dL-B3-hmd" customClass="RoutineListViewController" customModule="BioMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SWl-1g-Gx4"/>
+                        <viewControllerLayoutGuide type="bottom" id="VMP-oC-CkQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TbC-y2-Rou">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lQT-XW-DU4">
+                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <sections/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="St3-D3-UfB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rutinas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COE-ms-RHu">
+                                        <rect key="frame" x="151.5" y="9.5" width="73.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9J9-O7-JEj">
+                                        <rect key="frame" x="314" y="8" width="52" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Nueva"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="COE-ms-RHu" firstAttribute="centerY" secondItem="St3-D3-UfB" secondAttribute="centerY" id="R9M-dH-5Ic"/>
+                                    <constraint firstAttribute="trailing" secondItem="9J9-O7-JEj" secondAttribute="trailing" constant="9" id="WaM-V8-ab3"/>
+                                    <constraint firstItem="9J9-O7-JEj" firstAttribute="top" secondItem="St3-D3-UfB" secondAttribute="top" constant="8" id="X6o-qi-g2f"/>
+                                    <constraint firstAttribute="height" constant="44" id="Xgn-3K-jVy"/>
+                                    <constraint firstItem="COE-ms-RHu" firstAttribute="centerX" secondItem="St3-D3-UfB" secondAttribute="centerX" id="mGm-49-ghK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="St3-D3-UfB" firstAttribute="top" secondItem="SWl-1g-Gx4" secondAttribute="bottom" id="3bM-P2-2ed"/>
+                            <constraint firstItem="lQT-XW-DU4" firstAttribute="top" secondItem="St3-D3-UfB" secondAttribute="bottom" constant="10" id="NXT-Hd-JWB"/>
+                            <constraint firstItem="lQT-XW-DU4" firstAttribute="centerX" secondItem="TbC-y2-Rou" secondAttribute="centerX" id="WBo-2X-8J6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="St3-D3-UfB" secondAttribute="trailing" constant="-16" id="d7F-OJ-94d"/>
+                            <constraint firstItem="lQT-XW-DU4" firstAttribute="width" secondItem="TbC-y2-Rou" secondAttribute="width" id="jl6-ef-8gg"/>
+                            <constraint firstItem="St3-D3-UfB" firstAttribute="leading" secondItem="TbC-y2-Rou" secondAttribute="leadingMargin" constant="-16" id="jvP-Cq-1dP"/>
+                            <constraint firstItem="VMP-oC-CkQ" firstAttribute="top" secondItem="lQT-XW-DU4" secondAttribute="bottom" id="rHW-Do-wYo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newRoutineBtn" destination="9J9-O7-JEj" id="G44-AR-DTN"/>
+                        <outlet property="tableView" destination="lQT-XW-DU4" id="OGJ-Bp-qnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d79-4Q-18T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+</document>

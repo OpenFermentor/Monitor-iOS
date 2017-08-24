@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UINavigationBar.appearance().barTintColor = .white
         let navigationController = UINavigationController(rootViewController: TabsViewController.getInstance())
         navigationController.navigationBar.isHidden = true
         window = UIWindow(frame: Screen.bounds)
