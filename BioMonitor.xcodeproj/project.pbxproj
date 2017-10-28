@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A22E1891FA4DBC10082C4DC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22E1881FA4DBC10082C4DC /* Error.swift */; };
 		1A2968431F36355500109E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2968421F36355500109E31 /* AppDelegate.swift */; };
 		1A29684A1F36355500109E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2968491F36355500109E31 /* Assets.xcassets */; };
 		1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A29684B1F36355500109E31 /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A22E1881FA4DBC10082C4DC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1A29683F1F36355500109E31 /* BioMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2968421F36355500109E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A2968491F36355500109E31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				1A8B00B41F3A6EB3004470E9 /* Reading.swift */,
 				1A8B00B61F3A6FD9004470E9 /* Status.swift */,
 				1AD2867F1F3E4D5B00BC1361 /* Routine.swift */,
+				1A22E1881FA4DBC10082C4DC /* Error.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				1AD286801F3E4D5B00BC1361 /* Routine.swift in Sources */,
 				1AD2867E1F3E4CF100BC1361 /* RoutineEndpoints.swift in Sources */,
 				1A2968431F36355500109E31 /* AppDelegate.swift in Sources */,
+				1A22E1891FA4DBC10082C4DC /* Error.swift in Sources */,
 				1A790E601F375B6E001FC8BB /* LineChart.swift in Sources */,
 				1A790E571F3752F2001FC8BB /* RoutineListViewController.swift in Sources */,
 				1A790E4A1F374D98001FC8BB /* RouteTypes.swift in Sources */,

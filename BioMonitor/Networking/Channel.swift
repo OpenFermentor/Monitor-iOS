@@ -16,20 +16,23 @@ class RoutineChannel {
     let socket = Socket(url: Constants.Network.socketUrl)
     var statusChannel: Channel?
     var routineChannel: Channel?
-    var error = Variable<String?>(nil)
+    var instructionsChannel: Channel?
+    var error = Variable<BioMonitorError?>(nil)
     var status = Variable<Status?>(nil)
     var joinedRoutine = Variable<Bool>(false)
     var joinedSensors = Variable<Bool>(false)
-    var alert = Variable<String?>(nil)
+    var alert = Variable<BioMonitorError?>(nil)
     var update = Variable<Reading?>(nil)
     var started = Variable<Bool>(false)
     var lastReadings = Variable<[Reading]>([])
+    var instruction = Variable<String?>(nil)
 
     init() {
         socket.onConnect = { [weak self] in
             guard let `self` = self else { return }
             self.connectToRoutineChannel()
             self.connectToStatusChannel()
+            self.connectToInstrucitonsChannel()
         }
         socket.connect()
     }
@@ -44,15 +47,12 @@ class RoutineChannel {
             print("successfuly joined sensors channel")
             self.joinedSensors.value = true
         }
-        join.receive("error") { payload in
+        join.receive("error") { error in
             print("failed to join sensors channel")
             self.joinedSensors.value = false
-            self.error.value = payload.description
+            self.error.value = BioMonitorError.from(data: error)
         }
         channel.on("status") { status in
-            print("Status received ============")
-            print(status)
-            print("============================")
             guard let newStatus = Status.from(data: status.payload) else {
                 self.status.value = nil
                 return
@@ -60,10 +60,7 @@ class RoutineChannel {
             self.status.value = newStatus
         }
         channel.on("error") { error in
-            print("Error received ============")
-            print(error)
-            print("============================")
-            self.error.value = error.payload.description
+            self.error.value = BioMonitorError.from(data: error.payload)
         }
         statusChannel = channel
     }
@@ -78,10 +75,10 @@ class RoutineChannel {
             print("successfuly joined routine channel")
             self.joinedRoutine.value = true
         }
-        join.receive("error") { payload in
+        join.receive("error") { error in
             print("failed to join routine channel")
             self.joinedRoutine.value = true
-            self.error.value = payload.description
+            self.error.value = BioMonitorError.from(data: error)
         }
         channel.on("update") { update in
             guard let reading = Reading.from(data: update.payload) else {
@@ -100,12 +97,30 @@ class RoutineChannel {
             self.started.value = false
         }
         channel.on("alert") { alert in
-            print("Alert received ============")
-            print(alert)
-            print("============================")
-            self.alert.value = alert.payload.description
+            self.alert.value = BioMonitorError.from(data: alert.payload)
         }
         routineChannel = channel
+    }
+
+    func connectToInstrucitonsChannel() {
+        let channel = self.socket.channel("instructions")
+        guard let join = channel.join() else {
+            return
+        }
+        join.receive("ok") { payload in
+            print("successfuly joined instructions channel")
+            self.joinedRoutine.value = true
+        }
+        join.receive("error") { error in
+            print("failed to join instructions channel")
+            self.joinedRoutine.value = true
+            self.error.value = BioMonitorError.from(data: error)
+        }
+        channel.on("instruction") { instruction in
+            guard let message = instruction.payload["message"] as? String else { return }
+            self.instruction.value = message
+        }
+        instructionsChannel = channel
     }
 
     func addReading(reading: Reading) {
