@@ -40,7 +40,7 @@ class CurrentRoutineViewController: UIViewController {
                     self.phLbl.text = "\(status.ph) pH"
                     self.densityLbl.text = "\(status.density) g/l"
                 }
-            ).addDisposableTo(disposeBag)
+            ).disposed(by: disposeBag)
         channel.update
             .asObservable().subscribe(
                 onNext: { [unowned self] reading in
@@ -50,7 +50,7 @@ class CurrentRoutineViewController: UIViewController {
                     self.phLbl.text = "\(reading.ph) pH"
                     self.densityLbl.text = "\(reading.density) %"
                 }
-            ).addDisposableTo(disposeBag)
+            ).disposed(by: disposeBag)
     }
 
 }

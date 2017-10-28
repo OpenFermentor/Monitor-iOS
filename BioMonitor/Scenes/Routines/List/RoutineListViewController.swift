@@ -45,7 +45,7 @@ class RoutineListViewController: UIViewController {
             onError: { error in
                 print("========================error")
             }
-        ).addDisposableTo(disposeBag)
+        ).disposed(by: disposeBag)
     }
     
 }
