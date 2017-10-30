@@ -10,16 +10,15 @@ import Foundation
 import Material
 import Charts
 import RxSwift
+import Whisper
 
 class CurrentRoutineViewController: UIViewController {
 
-    @IBOutlet weak var densityLbl: UILabel!
     @IBOutlet weak var phLbl: UILabel!
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var tempContainer: UIView!
     @IBOutlet weak var phContainer: UIView!
-    @IBOutlet weak var densityContainer: UIView!
 
     let channel = RoutineChannel.shared
     let disposeBag = DisposeBag()
@@ -34,11 +33,10 @@ class CurrentRoutineViewController: UIViewController {
         channel.status
             .asObservable().subscribe(
                 onNext: { [unowned self] status in
-                    guard let status = status else { return }
+                    guard let _ = status else { return }
                     self.titleLbl.text = "Estado del sistema"
-                    self.tempLbl.text = "\(status.temp) ºC"
-                    self.phLbl.text = "\(status.ph) pH"
-                    self.densityLbl.text = "\(status.density) g/l"
+                    self.tempLbl.text = "En funcionamiento"
+                    self.phLbl.text = "En funcionamiento"
                 }
             ).disposed(by: disposeBag)
         channel.update
@@ -48,9 +46,31 @@ class CurrentRoutineViewController: UIViewController {
                     self.titleLbl.text = "Experimento en proceso: \(reading.routineId)"
                     self.tempLbl.text = "\(reading.temp) ºC"
                     self.phLbl.text = "\(reading.ph) pH"
-                    self.densityLbl.text = "\(reading.density) %"
                 }
             ).disposed(by: disposeBag)
+        channel.alert
+            .asObservable().subscribe(
+                onNext: { [unowned self] alert in
+                    guard let alert = alert else { return }
+                    let announcement = Announcement(title: "Error", subtitle: alert.message, image: nil, duration: 60)
+                    Whisper.show(shout: announcement, to: self)
+                }
+            ).disposed(by: disposeBag)
+        channel.error
+            .asObservable().subscribe(
+                onNext: { [unowned self] error in
+                    guard let error = error else { return }
+                    let announcement = Announcement(title: "Error del sistema", subtitle: error.message, image: nil, duration: 60)
+                    Whisper.show(shout: announcement, to: self)
+                }
+            ).disposed(by: disposeBag)
+        channel.instruction
+            .asObservable().subscribe(
+                onNext: { [unowned self] instruction in
+                    let alert = UIAlertController(title: "Nueva instrucción", message: instruction, preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
+                }
+        ).disposed(by: disposeBag)
     }
 
 }

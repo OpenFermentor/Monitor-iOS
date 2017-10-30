@@ -19,7 +19,7 @@ struct Routine {
     let targetPh: Double
     let targetDensity: Double
     let title: String
-    let extraNotes: String
+    let extraNotes: String?
     let duration: Double
     let strain: String
     let medium: String
@@ -36,7 +36,7 @@ extension Routine: OperaDecodable, Decodable {
             targetPh: json => "target_ph",
             targetDensity: json => "target_density",
             title: json => "title",
-            extraNotes: json => "extra_notes",
+            extraNotes: json =>? "extra_notes",
             duration: json => "estimated_time_seconds",
             strain: json => "strain",
             medium: json => "medium",

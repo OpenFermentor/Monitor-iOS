@@ -16,7 +16,6 @@ class RoutineDetailViewController: UIViewController {
     @IBOutlet weak var strain: UILabel!
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var ph: UILabel!
-    @IBOutlet weak var density: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var notes: UITextView!
 
@@ -31,9 +30,8 @@ class RoutineDetailViewController: UIViewController {
         strain.text = routine.strain
         temp.text = "\(routine.targetTemp)"
         ph.text = "\(routine.targetPh)"
-        density.text = "\(routine.targetDensity)"
         date.text = "\(routine.insertedAt.string())"
-        notes.text = routine.extraNotes
+        notes.text = routine.extraNotes ?? ""
         notes.layer.borderColor = Material.Color.blueGrey.base.cgColor
         notes.layer.borderWidth = 1
         notes.layer.cornerRadius = 5
