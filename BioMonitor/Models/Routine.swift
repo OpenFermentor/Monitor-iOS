@@ -45,3 +45,32 @@ extension Routine: OperaDecodable, Decodable {
     }
 
 }
+
+struct PageInfo {
+    let currentPage: String
+    let maxPage: String
+}
+
+extension PageInfo: OperaDecodable, Decodable {
+    static func decode(_ json: Any) throws -> PageInfo {
+        return try! PageInfo(
+            currentPage: json => "page",
+            maxPage: json => "max_page"
+        )
+    }
+}
+
+
+struct RoutinePage {
+    let routines: [Routine]
+    let pageInfo: PageInfo
+}
+
+extension RoutinePage: OperaDecodable, Decodable {
+    static func decode(_ json: Any) throws -> RoutinePage {
+        return try! RoutinePage(
+            routines: json => "data",
+            pageInfo: json => "paginate"
+        )
+    }
+}

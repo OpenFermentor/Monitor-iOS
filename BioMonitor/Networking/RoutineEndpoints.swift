@@ -13,7 +13,13 @@ import RxSwift
 struct RoutineEndpoints {
 
     struct Index: GetRouteType {
+        let page: Int
+
         let path = "/routines"
+
+        var parameters: [String : Any]? {
+            return ["page": page]
+        }
     }
 
 }
@@ -22,8 +28,8 @@ class RoutineController {
 
     static let shared = RoutineController()
 
-    func index() -> Single<[Routine]> {
-        return RoutineEndpoints.Index().rx.collection("data")
+    func index(page: Int) -> Single<RoutinePage> {
+        return RoutineEndpoints.Index(page: page).rx.object()
     }
 
 }

@@ -9,6 +9,7 @@
 import Foundation
 import Material
 import RxSwift
+import Whisper
 
 class RoutineListViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class RoutineListViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     fileprivate var routines = [Routine]()
+    fileprivate var currentPage = 0
+    fileprivate var nextPage = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +30,42 @@ class RoutineListViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         tableView.allowsSelection = true
-        // TODO: For now, until this feature is ready
         newRoutineBtn.isHidden = true
+        tableView.rx.reachedBottom.subscribe(onNext: { [unowned self] _ in
+            self.fetchRoutines()
+        }).disposed(by: disposeBag)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         fetchRoutines()
     }
 
-    func showDetail(routine: Routine) {
-
-    }
-
     func fetchRoutines() {
-        RoutineController.shared.index().subscribe(
-            onSuccess: { [unowned self] routines in
-                self.routines = routines
-                self.tableView.reloadData()
-            },
-            onError: { error in
-                print("========================error")
-            }
-        ).disposed(by: disposeBag)
+        guard currentPage < nextPage else { return }
+        RoutineController.shared.index(page: nextPage)
+            .observeOn(MainScheduler.instance)
+            .do(
+                onNext: { [unowned self] routinePage in
+                    Whisper.hide()
+                    guard
+                        let currentPage = Int(routinePage.pageInfo.currentPage),
+                        let maxPage = Int(routinePage.pageInfo.maxPage)
+                    else { return }
+                    routinePage.routines.forEach { self.routines.append($0) }
+                    if currentPage < maxPage {
+                        self.nextPage = currentPage + 1
+                        self.currentPage = currentPage
+                    }
+                    self.tableView.reloadData()
+                },
+                onError: { error in
+                    let announcement = Announcement(title: "Error", subtitle: "No se pudo conectar con el servidor", image: nil, duration: 180)
+                    Whisper.show(shout: announcement, to: self)
+                }
+            )
+            .subscribe()
+            .disposed(by: disposeBag)
     }
     
 }
