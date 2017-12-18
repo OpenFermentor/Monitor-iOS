@@ -30,6 +30,7 @@ class RoutineListViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         tableView.allowsSelection = true
+        tableView.backgroundColor = Color.grey.darken3
         newRoutineBtn.isHidden = true
         tableView.rx.reachedBottom.subscribe(onNext: { [unowned self] _ in
             self.fetchRoutines()
@@ -106,6 +107,6 @@ extension RoutineListViewController {
 
     fileprivate func prepareTabItem() {
         tabItem.titleColor = Color.blueGrey.base
-        tabItem.image = R.image.ic_view_list()
+        tabItem.image = R.image.beaker()
     }
 }

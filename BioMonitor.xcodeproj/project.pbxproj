@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A22E1891FA4DBC10082C4DC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22E1881FA4DBC10082C4DC /* Error.swift */; };
 		1A2968431F36355500109E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2968421F36355500109E31 /* AppDelegate.swift */; };
-		1A29684A1F36355500109E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2968491F36355500109E31 /* Assets.xcassets */; };
 		1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A29684B1F36355500109E31 /* LaunchScreen.storyboard */; };
 		1A7424471F37DA4B00FE825F /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7424461F37DA4A00FE825F /* Channel.swift */; };
 		1A790E4A1F374D98001FC8BB /* RouteTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E491F374D98001FC8BB /* RouteTypes.swift */; };
@@ -30,6 +29,7 @@
 		1AD286841F3E606F00BC1361 /* RoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD286831F3E606F00BC1361 /* RoutineCell.xib */; };
 		1AD286871F3E67EB00BC1361 /* RoutineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD286861F3E67EB00BC1361 /* RoutineDetailViewController.swift */; };
 		1AD286891F3E684300BC1361 /* RoutineDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD286881F3E684300BC1361 /* RoutineDetail.storyboard */; };
+		1AFBB11F1FE87AF1009A1C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFBB11E1FE87AF1009A1C8D /* Assets.xcassets */; };
 		4D267A92681C1F14017644AF /* Pods_BioMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF6B4A823ACA2D9D9A2A39F /* Pods_BioMonitor.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,6 @@
 		1A22E1881FA4DBC10082C4DC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1A29683F1F36355500109E31 /* BioMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2968421F36355500109E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A2968491F36355500109E31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A29684C1F36355500109E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A29684E1F36355500109E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7424461F37DA4A00FE825F /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = Networking/Channel.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		1AD286831F3E606F00BC1361 /* RoutineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RoutineCell.xib; path = Scenes/Routines/List/RoutineCell.xib; sourceTree = "<group>"; };
 		1AD286861F3E67EB00BC1361 /* RoutineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineDetailViewController.swift; path = Scenes/Routines/Detail/RoutineDetailViewController.swift; sourceTree = "<group>"; };
 		1AD286881F3E684300BC1361 /* RoutineDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RoutineDetail.storyboard; path = Scenes/Routines/Detail/RoutineDetail.storyboard; sourceTree = "<group>"; };
+		1AFBB11E1FE87AF1009A1C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		4511027578F3D4BD1258E2DC /* Pods-BioMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BioMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BioMonitor/Pods-BioMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		82AB9DC565FDDEDE2015D01B /* Pods-BioMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BioMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-BioMonitor/Pods-BioMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		FAF6B4A823ACA2D9D9A2A39F /* Pods_BioMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BioMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,8 +126,8 @@
 		1A75F4F81F3688F900D35E17 /* Support files */ = {
 			isa = PBXGroup;
 			children = (
+				1AFBB11E1FE87AF1009A1C8D /* Assets.xcassets */,
 				1A29684B1F36355500109E31 /* LaunchScreen.storyboard */,
-				1A2968491F36355500109E31 /* Assets.xcassets */,
 				1A29684E1F36355500109E31 /* Info.plist */,
 				1A2968421F36355500109E31 /* AppDelegate.swift */,
 				1A790E4B1F374DAD001FC8BB /* Constants.swift */,
@@ -288,8 +288,8 @@
 				1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */,
 				1A790E5B1F37576D001FC8BB /* CurrentRoutine.storyboard in Resources */,
 				1AD2867C1F3E4BCF00BC1361 /* RoutineList.storyboard in Resources */,
-				1A29684A1F36355500109E31 /* Assets.xcassets in Resources */,
 				1AD286841F3E606F00BC1361 /* RoutineCell.xib in Resources */,
+				1AFBB11F1FE87AF1009A1C8D /* Assets.xcassets in Resources */,
 				1AD286891F3E684300BC1361 /* RoutineDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
