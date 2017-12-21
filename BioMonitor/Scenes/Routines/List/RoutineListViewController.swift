@@ -24,23 +24,21 @@ class RoutineListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTabItem()
+        tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(R.nib.routineCell(), forCellReuseIdentifier: "routine_cell")
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         tableView.allowsSelection = true
-        tableView.backgroundColor = Color.grey.darken3
+        tableView.contentOffset.y = 0
         newRoutineBtn.isHidden = true
         tableView.rx.reachedBottom.subscribe(onNext: { [unowned self] _ in
             self.fetchRoutines()
         }).disposed(by: disposeBag)
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         fetchRoutines()
     }
+
 
     func fetchRoutines() {
         guard currentPage < nextPage else { return }

@@ -20,6 +20,10 @@
 		1A790E5B1F37576D001FC8BB /* CurrentRoutine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A790E5A1F37576D001FC8BB /* CurrentRoutine.storyboard */; };
 		1A790E5D1F3759E0001FC8BB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E5C1F3759E0001FC8BB /* R.generated.swift */; };
 		1A790E601F375B6E001FC8BB /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E5F1F375B6E001FC8BB /* LineChart.swift */; };
+		1A86AE1B1FEC69CF00B004DD /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86AE1A1FEC69CF00B004DD /* LogView.swift */; };
+		1A86AE1D1FEC6CC800B004DD /* LogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A86AE1C1FEC6CC800B004DD /* LogCell.xib */; };
+		1A86AE1F1FEC6D3F00B004DD /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86AE1E1FEC6D3F00B004DD /* LogCell.swift */; };
+		1A86AE211FEC6D9900B004DD /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86AE201FEC6D9900B004DD /* LogEntry.swift */; };
 		1A8B00B51F3A6EB3004470E9 /* Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B00B41F3A6EB3004470E9 /* Reading.swift */; };
 		1A8B00B71F3A6FD9004470E9 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B00B61F3A6FD9004470E9 /* Status.swift */; };
 		1AD2867C1F3E4BCF00BC1361 /* RoutineList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD2867B1F3E4BCF00BC1361 /* RoutineList.storyboard */; };
@@ -49,6 +53,10 @@
 		1A790E5A1F37576D001FC8BB /* CurrentRoutine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CurrentRoutine.storyboard; path = Scenes/Routines/Current/CurrentRoutine.storyboard; sourceTree = "<group>"; };
 		1A790E5C1F3759E0001FC8BB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		1A790E5F1F375B6E001FC8BB /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = Scenes/Routines/Charts/LineChart.swift; sourceTree = "<group>"; };
+		1A86AE1A1FEC69CF00B004DD /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogView.swift; path = Scenes/Routines/Detail/LogView.swift; sourceTree = "<group>"; };
+		1A86AE1C1FEC6CC800B004DD /* LogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogCell.xib; sourceTree = "<group>"; };
+		1A86AE1E1FEC6D3F00B004DD /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogCell.swift; path = Scenes/Routines/Detail/LogCell.swift; sourceTree = "<group>"; };
+		1A86AE201FEC6D9900B004DD /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogEntry.swift; path = Models/LogEntry.swift; sourceTree = "<group>"; };
 		1A8B00B41F3A6EB3004470E9 /* Reading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reading.swift; path = Models/Reading.swift; sourceTree = "<group>"; };
 		1A8B00B61F3A6FD9004470E9 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Status.swift; path = Models/Status.swift; sourceTree = "<group>"; };
 		1AD2867B1F3E4BCF00BC1361 /* RoutineList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RoutineList.storyboard; path = Scenes/Routines/List/RoutineList.storyboard; sourceTree = "<group>"; };
@@ -209,6 +217,7 @@
 				1A8B00B61F3A6FD9004470E9 /* Status.swift */,
 				1AD2867F1F3E4D5B00BC1361 /* Routine.swift */,
 				1A22E1881FA4DBC10082C4DC /* Error.swift */,
+				1A86AE201FEC6D9900B004DD /* LogEntry.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -218,6 +227,9 @@
 			children = (
 				1AD286861F3E67EB00BC1361 /* RoutineDetailViewController.swift */,
 				1AD286881F3E684300BC1361 /* RoutineDetail.storyboard */,
+				1A86AE1A1FEC69CF00B004DD /* LogView.swift */,
+				1A86AE1C1FEC6CC800B004DD /* LogCell.xib */,
+				1A86AE1E1FEC6D3F00B004DD /* LogCell.swift */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -288,6 +300,7 @@
 				1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */,
 				1A790E5B1F37576D001FC8BB /* CurrentRoutine.storyboard in Resources */,
 				1AD2867C1F3E4BCF00BC1361 /* RoutineList.storyboard in Resources */,
+				1A86AE1D1FEC6CC800B004DD /* LogCell.xib in Resources */,
 				1AD286841F3E606F00BC1361 /* RoutineCell.xib in Resources */,
 				1AFBB11F1FE87AF1009A1C8D /* Assets.xcassets in Resources */,
 				1AD286891F3E684300BC1361 /* RoutineDetail.storyboard in Resources */,
@@ -404,6 +417,7 @@
 				1AD286871F3E67EB00BC1361 /* RoutineDetailViewController.swift in Sources */,
 				1A790E5D1F3759E0001FC8BB /* R.generated.swift in Sources */,
 				1AD286801F3E4D5B00BC1361 /* Routine.swift in Sources */,
+				1A86AE1B1FEC69CF00B004DD /* LogView.swift in Sources */,
 				1AD2867E1F3E4CF100BC1361 /* RoutineEndpoints.swift in Sources */,
 				1A2968431F36355500109E31 /* AppDelegate.swift in Sources */,
 				1A22E1891FA4DBC10082C4DC /* Error.swift in Sources */,
@@ -413,6 +427,8 @@
 				1A8B00B71F3A6FD9004470E9 /* Status.swift in Sources */,
 				1A790E591F3753D7001FC8BB /* CurrentRoutineViewController.swift in Sources */,
 				1A790E4C1F374DAD001FC8BB /* Constants.swift in Sources */,
+				1A86AE211FEC6D9900B004DD /* LogEntry.swift in Sources */,
+				1A86AE1F1FEC6D3F00B004DD /* LogCell.swift in Sources */,
 				1A790E4E1F374E1C001FC8BB /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

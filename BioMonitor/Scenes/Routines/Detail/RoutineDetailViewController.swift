@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Material
+import RxSwift
 
 class RoutineDetailViewController: UIViewController {
     
@@ -17,28 +18,50 @@ class RoutineDetailViewController: UIViewController {
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var ph: UILabel!
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var notes: UITextView!
+    @IBOutlet weak var notes: UILabel!
+    @IBOutlet weak var tempTolerance: UILabel!
+    @IBOutlet weak var phTolerance: UILabel!
+    @IBOutlet weak var detailStack: UIStackView!
+    @IBOutlet weak var segmented: UISegmentedControl!
+    @IBOutlet weak var logContainer: LogView!
 
+    private var disposeBag = DisposeBag()
 
     var routine: Routine!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
-        title = routine.title
-        medium.text = routine.medium
-        strain.text = routine.strain
-        temp.text = "\(routine.targetTemp)"
-        ph.text = "\(routine.targetPh)"
-        date.text = "\(routine.insertedAt.string())"
-        notes.text = routine.extraNotes ?? ""
-        notes.layer.borderColor = Material.Color.blueGrey.base.cgColor
-        notes.layer.borderWidth = 1
-        notes.layer.cornerRadius = 5
+        segmented.rx.value
+            .asObservable()
+            .subscribe(onNext: { [unowned self] value in
+                self.selectedSectionChanged(index: value)
+            })
+            .disposed(by: disposeBag)
+        logContainer.loadEntries(with: routine.id)
+        stylize()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isHidden = true
     }
+
+    private func stylize() {
+        logContainer.isHidden = true
+        title = routine.title
+        medium.text = routine.medium
+        strain.text = routine.strain
+        temp.text = "\(routine.targetTemp)"
+        ph.text = "\(routine.targetPh)"
+        date.text = "\(routine.insertedAt.string())"
+        notes.text = routine.extraNotes ?? "No hay notas"
+        view.backgroundColor = .white
+    }
+
+    private func selectedSectionChanged(index: Int) {
+        detailStack.isHidden = index != 0
+        logContainer.isHidden = index != 1
+    }
+
 }
