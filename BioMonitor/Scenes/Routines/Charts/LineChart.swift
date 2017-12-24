@@ -12,30 +12,21 @@ import Material
 
 class LineChart: LineChartView {
 
-    func setup() {
+    func setup(with data: [Result], name: String, color: UIColor, circleColor: UIColor) {
         chartDescription?.enabled = false
         drawGridBackgroundEnabled = true
         dragEnabled = true
         pinchZoomEnabled = false
-        self.data = dummyData()
+        self.data = pointsToChartData(points: data, name: name, color: color, circleColor: circleColor)
         self.data?.notifyDataChanged()
     }
 
-    func dummyData() -> LineChartData {
-        let data = [0,1,2,3,4,5,6,7,8,9,10].map { ChartDataEntry(x: $0, y: $0) }
-        let dataSet = LineChartDataSet(values: data, label: "Temperature")
-        dataSet.setColor(Material.Color.amber.base)
-        dataSet.setCircleColor(Material.Color.amber.accent1)
-        let lineData = LineChartData(dataSet: dataSet)
-        return lineData
-    }
-
-    func toTempDataEntries(readings: [Reading]) -> LineChartData {
-        let data = readings.map { ChartDataEntry(x: log2($0.insertedAt.timeIntervalSince1970), y: $0.temp)}
-        let dataSet = LineChartDataSet(values: data, label: "Temperature")
+    private func pointsToChartData(points: [Result], name: String, color: UIColor, circleColor: UIColor) -> LineChartData {
+        let data = points.map { ChartDataEntry(x: $0.x, y: $0.y)}
+        let dataSet = LineChartDataSet(values: data, label: name)
         dataSet.mode = .cubicBezier
-        dataSet.setColor(Material.Color.amber.base)
-        dataSet.setCircleColor(Material.Color.amber.accent1)
+        dataSet.setColor(color)
+        dataSet.setCircleColor(circleColor)
         let lineData = LineChartData(dataSet: dataSet)
         return lineData
     }

@@ -33,6 +33,12 @@
                                 </segments>
                                 <color key="tintColor" red="0.1333333333" green="0.30980392159999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5H-QP-jKg">
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
+                                <connections>
+                                    <segue destination="TWi-na-hEC" kind="embed" identifier="report_segue" id="eLX-PK-nCj"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUf-ru-fKA" customClass="LogView" customModule="BioMonitor" customModuleProvider="target">
                                 <rect key="frame" x="-0.5" y="112" width="375" height="555"/>
                                 <subviews>
@@ -266,9 +272,13 @@
                             <constraint firstItem="fiO-kp-0p8" firstAttribute="top" secondItem="UJ8-zX-Q4I" secondAttribute="bottom" constant="-1" id="GpD-If-v2k"/>
                             <constraint firstItem="sHN-Cm-aF6" firstAttribute="width" secondItem="TUf-ru-fKA" secondAttribute="width" id="HXk-NK-vHP"/>
                             <constraint firstItem="UJ8-zX-Q4I" firstAttribute="width" secondItem="ysJ-Os-8ZX" secondAttribute="width" id="NT9-IV-ldz"/>
+                            <constraint firstItem="fiO-kp-0p8" firstAttribute="top" secondItem="o5H-QP-jKg" secondAttribute="bottom" id="a4q-er-Vcy"/>
+                            <constraint firstItem="o5H-QP-jKg" firstAttribute="centerX" secondItem="ysJ-Os-8ZX" secondAttribute="centerX" id="gJG-M4-RKJ"/>
                             <constraint firstItem="fiO-kp-0p8" firstAttribute="top" secondItem="TUf-ru-fKA" secondAttribute="bottom" id="gcb-Yj-eh6"/>
+                            <constraint firstItem="o5H-QP-jKg" firstAttribute="width" secondItem="ysJ-Os-8ZX" secondAttribute="width" id="jU5-Ac-Ua0"/>
                             <constraint firstItem="kQJ-Iq-Gb7" firstAttribute="top" secondItem="wHe-rD-G1U" secondAttribute="bottom" constant="10" id="qHN-Tc-6Rx"/>
                             <constraint firstItem="TUf-ru-fKA" firstAttribute="centerX" secondItem="ysJ-Os-8ZX" secondAttribute="centerX" id="rdx-2a-cHI"/>
+                            <constraint firstItem="o5H-QP-jKg" firstAttribute="top" secondItem="kQJ-Iq-Gb7" secondAttribute="bottom" constant="10" id="rh9-fc-SJT"/>
                             <constraint firstItem="UJ8-zX-Q4I" firstAttribute="top" secondItem="kQJ-Iq-Gb7" secondAttribute="bottom" constant="10" id="tb3-D3-H7a"/>
                             <constraint firstItem="TUf-ru-fKA" firstAttribute="width" secondItem="ysJ-Os-8ZX" secondAttribute="width" id="uHe-eJ-1uV"/>
                         </constraints>
@@ -283,6 +293,7 @@
                         <outlet property="notes" destination="OkJ-Xw-bcD" id="3ev-UH-X7Y"/>
                         <outlet property="ph" destination="ofh-r8-5ot" id="3I1-qC-yJi"/>
                         <outlet property="phTolerance" destination="9UK-xI-2VH" id="Da4-EI-Nuo"/>
+                        <outlet property="reportContainer" destination="o5H-QP-jKg" id="rNj-NL-gLU"/>
                         <outlet property="segmented" destination="kQJ-Iq-Gb7" id="t8F-DD-RGY"/>
                         <outlet property="strain" destination="zwF-dX-0sH" id="1gE-3W-jd7"/>
                         <outlet property="temp" destination="Si8-TA-Nfo" id="37s-ee-R7F"/>
@@ -291,7 +302,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2I-M4-aTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="-115"/>
+            <point key="canvasLocation" x="36" y="-147"/>
+        </scene>
+        <!--Routine Report-->
+        <scene sceneID="z4u-vK-RmC">
+            <objects>
+                <viewController id="TWi-na-hEC" customClass="RoutineReport" customModule="BioMonitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cn7-ua-O52">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLg-TQ-V0g">
+                                <rect key="frame" x="0.0" y="263" width="375" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.1333333333" green="0.30980392159999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hH6-lx-mya">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hH6-lx-mya" firstAttribute="centerY" secondItem="cn7-ua-O52" secondAttribute="centerY" id="7uH-4N-xoa"/>
+                            <constraint firstItem="hH6-lx-mya" firstAttribute="centerX" secondItem="cn7-ua-O52" secondAttribute="centerX" id="8EU-64-xxJ"/>
+                            <constraint firstItem="hH6-lx-mya" firstAttribute="height" secondItem="cn7-ua-O52" secondAttribute="height" id="ash-y0-tw9"/>
+                            <constraint firstItem="SLg-TQ-V0g" firstAttribute="centerX" secondItem="cn7-ua-O52" secondAttribute="centerX" id="j6b-fQ-qg4"/>
+                            <constraint firstItem="hH6-lx-mya" firstAttribute="width" secondItem="cn7-ua-O52" secondAttribute="width" id="llF-T3-mBp"/>
+                            <constraint firstItem="SLg-TQ-V0g" firstAttribute="width" secondItem="cn7-ua-O52" secondAttribute="width" id="mRv-Cv-lYg"/>
+                            <constraint firstItem="SLg-TQ-V0g" firstAttribute="centerY" secondItem="cn7-ua-O52" secondAttribute="centerY" id="yS6-GJ-qav"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="SLg-TQ-V0g" id="CaJ-W7-qdd"/>
+                        <outlet property="scrollView" destination="hH6-lx-mya" id="A4J-fp-6Ar"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nul-ga-6de" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-425" y="569"/>
         </scene>
     </scenes>
 </document>

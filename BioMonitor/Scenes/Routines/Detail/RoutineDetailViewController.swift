@@ -24,6 +24,7 @@ class RoutineDetailViewController: UIViewController {
     @IBOutlet weak var detailStack: UIStackView!
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var logContainer: LogView!
+    @IBOutlet weak var reportContainer: UIView!
 
     private var disposeBag = DisposeBag()
 
@@ -47,6 +48,17 @@ class RoutineDetailViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let id = segue.identifier else { return }
+        switch id {
+        case "report_segue":
+            guard let vc = segue.destination as? RoutineReport else { return }
+            vc.routineId = routine.id
+        default:
+            return
+        }
+    }
+
     private func stylize() {
         logContainer.isHidden = true
         title = routine.title
@@ -62,6 +74,7 @@ class RoutineDetailViewController: UIViewController {
     private func selectedSectionChanged(index: Int) {
         detailStack.isHidden = index != 0
         logContainer.isHidden = index != 1
+        reportContainer.isHidden = index != 2
     }
 
 }

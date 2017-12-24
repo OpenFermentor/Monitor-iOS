@@ -29,6 +29,13 @@ struct RoutineEndpoints {
         }
     }
 
+    struct Report: GetRouteType {
+        let routineId: Int
+        var path: String {
+            return "/routines/\(routineId)/readings/calculations"
+        }
+    }
+
 }
 
 class RoutineController {
@@ -41,6 +48,10 @@ class RoutineController {
 
     func logEntries(routineId: Int) -> Single<[LogEntry]> {
         return RoutineEndpoints.LogEntries(routineId: routineId).rx.collection("data")
+    }
+
+    func report(routineId: Int) -> Single<Report> {
+        return RoutineEndpoints.Report(routineId: routineId).rx.object("data")
     }
 
 }

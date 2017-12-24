@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A19EAA91FEFE4B200ED9FBC /* RoutineReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A19EAA81FEFE4B200ED9FBC /* RoutineReport.swift */; };
+		1A19EAAB1FEFE51700ED9FBC /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A19EAAA1FEFE51700ED9FBC /* Report.swift */; };
 		1A22E1891FA4DBC10082C4DC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22E1881FA4DBC10082C4DC /* Error.swift */; };
 		1A2968431F36355500109E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2968421F36355500109E31 /* AppDelegate.swift */; };
 		1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A29684B1F36355500109E31 /* LaunchScreen.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A19EAA81FEFE4B200ED9FBC /* RoutineReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoutineReport.swift; path = Scenes/Routines/Charts/RoutineReport.swift; sourceTree = "<group>"; };
+		1A19EAAA1FEFE51700ED9FBC /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Models/Report.swift; sourceTree = "<group>"; };
 		1A22E1881FA4DBC10082C4DC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1A29683F1F36355500109E31 /* BioMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2968421F36355500109E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				1A790E5F1F375B6E001FC8BB /* LineChart.swift */,
+				1A19EAA81FEFE4B200ED9FBC /* RoutineReport.swift */,
 			);
 			name = Charts;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				1AD2867F1F3E4D5B00BC1361 /* Routine.swift */,
 				1A22E1881FA4DBC10082C4DC /* Error.swift */,
 				1A86AE201FEC6D9900B004DD /* LogEntry.swift */,
+				1A19EAAA1FEFE51700ED9FBC /* Report.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -439,6 +445,8 @@
 				1A86AE1B1FEC69CF00B004DD /* LogView.swift in Sources */,
 				1AD2867E1F3E4CF100BC1361 /* RoutineEndpoints.swift in Sources */,
 				1A2968431F36355500109E31 /* AppDelegate.swift in Sources */,
+				1A19EAAB1FEFE51700ED9FBC /* Report.swift in Sources */,
+				1A19EAA91FEFE4B200ED9FBC /* RoutineReport.swift in Sources */,
 				1A22E1891FA4DBC10082C4DC /* Error.swift in Sources */,
 				1A790E601F375B6E001FC8BB /* LineChart.swift in Sources */,
 				1ADE9EE91FEFD70F0026D905 /* UserEndpoints.swift in Sources */,
