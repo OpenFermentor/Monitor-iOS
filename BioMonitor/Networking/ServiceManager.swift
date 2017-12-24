@@ -18,15 +18,26 @@ class ServiceManager: RxManager {
 
     override init(manager: Alamofire.SessionManager) {
         super.init(manager: manager)
-
         observers = [Logger()]
+        requestAdapter = AuthAdapter()
         useMockedData = false
     }
+
+
 
 }
 
 struct Logger: OperaSwift.ObserverType {
     func willSendRequest(_ alamoRequest: Alamofire.Request, requestConvertible: URLRequestConvertible) {
         debugPrint(alamoRequest)
+    }
+}
+
+class AuthAdapter: RequestAdapter {
+    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+        guard let token = UserController.shared.getAuthToken() else { return urlRequest }
+        var request = urlRequest
+        request.allHTTPHeaderFields?[Constants.Auth.authHeader] = token
+        return request
     }
 }
