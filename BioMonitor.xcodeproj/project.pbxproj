@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A19EAA91FEFE4B200ED9FBC /* RoutineReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A19EAA81FEFE4B200ED9FBC /* RoutineReport.swift */; };
+		1A19EAAB1FEFE51700ED9FBC /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A19EAAA1FEFE51700ED9FBC /* Report.swift */; };
 		1A22E1891FA4DBC10082C4DC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22E1881FA4DBC10082C4DC /* Error.swift */; };
 		1A2968431F36355500109E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2968421F36355500109E31 /* AppDelegate.swift */; };
-		1A29684A1F36355500109E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2968491F36355500109E31 /* Assets.xcassets */; };
 		1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A29684B1F36355500109E31 /* LaunchScreen.storyboard */; };
 		1A7424471F37DA4B00FE825F /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7424461F37DA4A00FE825F /* Channel.swift */; };
 		1A790E4A1F374D98001FC8BB /* RouteTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E491F374D98001FC8BB /* RouteTypes.swift */; };
@@ -21,6 +22,10 @@
 		1A790E5B1F37576D001FC8BB /* CurrentRoutine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A790E5A1F37576D001FC8BB /* CurrentRoutine.storyboard */; };
 		1A790E5D1F3759E0001FC8BB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E5C1F3759E0001FC8BB /* R.generated.swift */; };
 		1A790E601F375B6E001FC8BB /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A790E5F1F375B6E001FC8BB /* LineChart.swift */; };
+		1A86AE1B1FEC69CF00B004DD /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86AE1A1FEC69CF00B004DD /* LogView.swift */; };
+		1A86AE1D1FEC6CC800B004DD /* LogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A86AE1C1FEC6CC800B004DD /* LogCell.xib */; };
+		1A86AE1F1FEC6D3F00B004DD /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86AE1E1FEC6D3F00B004DD /* LogCell.swift */; };
+		1A86AE211FEC6D9900B004DD /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86AE201FEC6D9900B004DD /* LogEntry.swift */; };
 		1A8B00B51F3A6EB3004470E9 /* Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B00B41F3A6EB3004470E9 /* Reading.swift */; };
 		1A8B00B71F3A6FD9004470E9 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B00B61F3A6FD9004470E9 /* Status.swift */; };
 		1AD2867C1F3E4BCF00BC1361 /* RoutineList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD2867B1F3E4BCF00BC1361 /* RoutineList.storyboard */; };
@@ -30,14 +35,19 @@
 		1AD286841F3E606F00BC1361 /* RoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD286831F3E606F00BC1361 /* RoutineCell.xib */; };
 		1AD286871F3E67EB00BC1361 /* RoutineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD286861F3E67EB00BC1361 /* RoutineDetailViewController.swift */; };
 		1AD286891F3E684300BC1361 /* RoutineDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD286881F3E684300BC1361 /* RoutineDetail.storyboard */; };
+		1ADE9EE51FEFD1A10026D905 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE9EE41FEFD1A10026D905 /* LoginViewController.swift */; };
+		1ADE9EE71FEFD1AB0026D905 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE9EE61FEFD1AB0026D905 /* Login.storyboard */; };
+		1ADE9EE91FEFD70F0026D905 /* UserEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE9EE81FEFD70F0026D905 /* UserEndpoints.swift */; };
+		1AFBB11F1FE87AF1009A1C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFBB11E1FE87AF1009A1C8D /* Assets.xcassets */; };
 		4D267A92681C1F14017644AF /* Pods_BioMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF6B4A823ACA2D9D9A2A39F /* Pods_BioMonitor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A19EAA81FEFE4B200ED9FBC /* RoutineReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoutineReport.swift; path = Scenes/Routines/Charts/RoutineReport.swift; sourceTree = "<group>"; };
+		1A19EAAA1FEFE51700ED9FBC /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Models/Report.swift; sourceTree = "<group>"; };
 		1A22E1881FA4DBC10082C4DC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1A29683F1F36355500109E31 /* BioMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2968421F36355500109E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A2968491F36355500109E31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A29684C1F36355500109E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A29684E1F36355500109E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7424461F37DA4A00FE825F /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = Networking/Channel.swift; sourceTree = "<group>"; };
@@ -50,6 +60,10 @@
 		1A790E5A1F37576D001FC8BB /* CurrentRoutine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CurrentRoutine.storyboard; path = Scenes/Routines/Current/CurrentRoutine.storyboard; sourceTree = "<group>"; };
 		1A790E5C1F3759E0001FC8BB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		1A790E5F1F375B6E001FC8BB /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = Scenes/Routines/Charts/LineChart.swift; sourceTree = "<group>"; };
+		1A86AE1A1FEC69CF00B004DD /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogView.swift; path = Scenes/Routines/Detail/LogView.swift; sourceTree = "<group>"; };
+		1A86AE1C1FEC6CC800B004DD /* LogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogCell.xib; sourceTree = "<group>"; };
+		1A86AE1E1FEC6D3F00B004DD /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogCell.swift; path = Scenes/Routines/Detail/LogCell.swift; sourceTree = "<group>"; };
+		1A86AE201FEC6D9900B004DD /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogEntry.swift; path = Models/LogEntry.swift; sourceTree = "<group>"; };
 		1A8B00B41F3A6EB3004470E9 /* Reading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reading.swift; path = Models/Reading.swift; sourceTree = "<group>"; };
 		1A8B00B61F3A6FD9004470E9 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Status.swift; path = Models/Status.swift; sourceTree = "<group>"; };
 		1AD2867B1F3E4BCF00BC1361 /* RoutineList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RoutineList.storyboard; path = Scenes/Routines/List/RoutineList.storyboard; sourceTree = "<group>"; };
@@ -59,6 +73,10 @@
 		1AD286831F3E606F00BC1361 /* RoutineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RoutineCell.xib; path = Scenes/Routines/List/RoutineCell.xib; sourceTree = "<group>"; };
 		1AD286861F3E67EB00BC1361 /* RoutineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineDetailViewController.swift; path = Scenes/Routines/Detail/RoutineDetailViewController.swift; sourceTree = "<group>"; };
 		1AD286881F3E684300BC1361 /* RoutineDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RoutineDetail.storyboard; path = Scenes/Routines/Detail/RoutineDetail.storyboard; sourceTree = "<group>"; };
+		1ADE9EE41FEFD1A10026D905 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1ADE9EE61FEFD1AB0026D905 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		1ADE9EE81FEFD70F0026D905 /* UserEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoints.swift; sourceTree = "<group>"; };
+		1AFBB11E1FE87AF1009A1C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		4511027578F3D4BD1258E2DC /* Pods-BioMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BioMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BioMonitor/Pods-BioMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		82AB9DC565FDDEDE2015D01B /* Pods-BioMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BioMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-BioMonitor/Pods-BioMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		FAF6B4A823ACA2D9D9A2A39F /* Pods_BioMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BioMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,8 +144,8 @@
 		1A75F4F81F3688F900D35E17 /* Support files */ = {
 			isa = PBXGroup;
 			children = (
+				1AFBB11E1FE87AF1009A1C8D /* Assets.xcassets */,
 				1A29684B1F36355500109E31 /* LaunchScreen.storyboard */,
-				1A2968491F36355500109E31 /* Assets.xcassets */,
 				1A29684E1F36355500109E31 /* Info.plist */,
 				1A2968421F36355500109E31 /* AppDelegate.swift */,
 				1A790E4B1F374DAD001FC8BB /* Constants.swift */,
@@ -138,6 +156,7 @@
 		1A75F4F91F36891000D35E17 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1ADE9EE31FEFD1920026D905 /* Login */,
 				1A75F4FD1F36898300D35E17 /* Routines */,
 				1A75F4FB1F36896E00D35E17 /* Navigation */,
 			);
@@ -151,6 +170,7 @@
 				1A790E4D1F374E1C001FC8BB /* ServiceManager.swift */,
 				1A7424461F37DA4A00FE825F /* Channel.swift */,
 				1AD2867D1F3E4CF100BC1361 /* RoutineEndpoints.swift */,
+				1ADE9EE81FEFD70F0026D905 /* UserEndpoints.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -198,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				1A790E5F1F375B6E001FC8BB /* LineChart.swift */,
+				1A19EAA81FEFE4B200ED9FBC /* RoutineReport.swift */,
 			);
 			name = Charts;
 			sourceTree = "<group>";
@@ -209,6 +230,8 @@
 				1A8B00B61F3A6FD9004470E9 /* Status.swift */,
 				1AD2867F1F3E4D5B00BC1361 /* Routine.swift */,
 				1A22E1881FA4DBC10082C4DC /* Error.swift */,
+				1A86AE201FEC6D9900B004DD /* LogEntry.swift */,
+				1A19EAAA1FEFE51700ED9FBC /* Report.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -218,8 +241,20 @@
 			children = (
 				1AD286861F3E67EB00BC1361 /* RoutineDetailViewController.swift */,
 				1AD286881F3E684300BC1361 /* RoutineDetail.storyboard */,
+				1A86AE1A1FEC69CF00B004DD /* LogView.swift */,
+				1A86AE1C1FEC6CC800B004DD /* LogCell.xib */,
+				1A86AE1E1FEC6D3F00B004DD /* LogCell.swift */,
 			);
 			name = Detail;
+			sourceTree = "<group>";
+		};
+		1ADE9EE31FEFD1920026D905 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1ADE9EE41FEFD1A10026D905 /* LoginViewController.swift */,
+				1ADE9EE61FEFD1AB0026D905 /* Login.storyboard */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,11 +320,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ADE9EE71FEFD1AB0026D905 /* Login.storyboard in Resources */,
 				1A29684D1F36355500109E31 /* LaunchScreen.storyboard in Resources */,
 				1A790E5B1F37576D001FC8BB /* CurrentRoutine.storyboard in Resources */,
 				1AD2867C1F3E4BCF00BC1361 /* RoutineList.storyboard in Resources */,
-				1A29684A1F36355500109E31 /* Assets.xcassets in Resources */,
+				1A86AE1D1FEC6CC800B004DD /* LogCell.xib in Resources */,
 				1AD286841F3E606F00BC1361 /* RoutineCell.xib in Resources */,
+				1AFBB11F1FE87AF1009A1C8D /* Assets.xcassets in Resources */,
 				1AD286891F3E684300BC1361 /* RoutineDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ADE9EE51FEFD1A10026D905 /* LoginViewController.swift in Sources */,
 				1A790E551F375209001FC8BB /* TabsViewController.swift in Sources */,
 				1AD286821F3E605000BC1361 /* RoutineCell.swift in Sources */,
 				1A8B00B51F3A6EB3004470E9 /* Reading.swift in Sources */,
@@ -404,15 +442,21 @@
 				1AD286871F3E67EB00BC1361 /* RoutineDetailViewController.swift in Sources */,
 				1A790E5D1F3759E0001FC8BB /* R.generated.swift in Sources */,
 				1AD286801F3E4D5B00BC1361 /* Routine.swift in Sources */,
+				1A86AE1B1FEC69CF00B004DD /* LogView.swift in Sources */,
 				1AD2867E1F3E4CF100BC1361 /* RoutineEndpoints.swift in Sources */,
 				1A2968431F36355500109E31 /* AppDelegate.swift in Sources */,
+				1A19EAAB1FEFE51700ED9FBC /* Report.swift in Sources */,
+				1A19EAA91FEFE4B200ED9FBC /* RoutineReport.swift in Sources */,
 				1A22E1891FA4DBC10082C4DC /* Error.swift in Sources */,
 				1A790E601F375B6E001FC8BB /* LineChart.swift in Sources */,
+				1ADE9EE91FEFD70F0026D905 /* UserEndpoints.swift in Sources */,
 				1A790E571F3752F2001FC8BB /* RoutineListViewController.swift in Sources */,
 				1A790E4A1F374D98001FC8BB /* RouteTypes.swift in Sources */,
 				1A8B00B71F3A6FD9004470E9 /* Status.swift in Sources */,
 				1A790E591F3753D7001FC8BB /* CurrentRoutineViewController.swift in Sources */,
 				1A790E4C1F374DAD001FC8BB /* Constants.swift in Sources */,
+				1A86AE211FEC6D9900B004DD /* LogEntry.swift in Sources */,
+				1A86AE1F1FEC6D3F00B004DD /* LogCell.swift in Sources */,
 				1A790E4E1F374E1C001FC8BB /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

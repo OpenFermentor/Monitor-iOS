@@ -14,11 +14,14 @@ import Whisper
 
 class CurrentRoutineViewController: UIViewController {
 
+    @IBOutlet weak var header: UILabel!
     @IBOutlet weak var phLbl: UILabel!
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var pumpsLbl: UILabel!
     @IBOutlet weak var tempContainer: UIView!
     @IBOutlet weak var phContainer: UIView!
+    @IBOutlet weak var pumpsContainer: UIView!
 
     let channel = RoutineChannel.shared
     let disposeBag = DisposeBag()
@@ -33,17 +36,25 @@ class CurrentRoutineViewController: UIViewController {
         channel.status
             .asObservable().subscribe(
                 onNext: { [unowned self] status in
-                    guard let _ = status else { return }
+                    guard let status = status else { return }
+                    self.header.text = "En este momento no hay ningun experimento en proceso. Puede comenzar uno desde su equipo local"
                     self.titleLbl.text = "Estado del sistema"
-                    self.tempLbl.text = "En funcionamiento"
-                    self.phLbl.text = "En funcionamiento"
+                    self.tempLbl.text = status.temp ? "Conectado" : "Desconectado"
+                    self.phLbl.text = status.ph ? "Conectado" : "Desconectado"
+                    self.pumpsLbl.text = status.pumps ? "Conectadas" : "Desconectadas"
+                    self.pumpsLbl.textColor = status.pumps ? Color.green.base : Color.amber.base
+                    self.tempLbl.textColor = status.temp ? Color.green.base : Color.amber.base
+                    self.phLbl.textColor = status.ph ? Color.green.base : Color.amber.base
+                    self.pumpsContainer.isHidden = false
                 }
             ).disposed(by: disposeBag)
         channel.update
             .asObservable().subscribe(
                 onNext: { [unowned self] reading in
                     guard let reading = reading else { return }
-                    self.titleLbl.text = "Experimento en proceso: \(reading.routineId)"
+                    self.titleLbl.text = "Experimento en proceso"
+                    self.header.text = "Estas son las últimas lecturas registradas para el experimento"
+                    self.pumpsContainer.isHidden = true
                     self.tempLbl.text = "\(reading.temp) ºC"
                     self.phLbl.text = "\(reading.ph) pH"
                 }
@@ -83,6 +94,6 @@ extension CurrentRoutineViewController {
 
     fileprivate func prepareTabItem() {
         tabItem.titleColor = Color.blueGrey.base
-        tabItem.image = R.image.ic_graphic_eq()
+        tabItem.image = R.image.home()
     }
 }

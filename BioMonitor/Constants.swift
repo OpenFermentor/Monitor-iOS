@@ -13,4 +13,9 @@ struct Constants {
         static let baseUrl = URL(string:"http://localhost:4000/api")!
         static let socketUrl = URL(string: "http://localhost:4000/socket/websocket")!
     }
+
+    struct Auth {
+        static let authHeader = "access-token"
+        static let authKey = "com.open.fermentor.auth"
+    }
 }
