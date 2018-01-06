@@ -54,8 +54,8 @@ class RoutineListViewController: UIViewController {
                     routinePage.routines.forEach { self.routines.append($0) }
                     if currentPage < maxPage {
                         self.nextPage = currentPage + 1
-                        self.currentPage = currentPage
                     }
+                    self.currentPage = currentPage
                     self.tableView.reloadData()
                 },
                 onError: { error in
