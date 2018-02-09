@@ -1,19 +1,27 @@
-platform :ios, '9.0'
+platform :ios, '9.2'
 
 target 'BioMonitor' do
   use_frameworks!
 
-  pod 'OperaSwift',  '~> 2.0'
-  pod 'RxCocoa', '~> 3.4'
-  pod 'Charts', '~> 3.0.2'
-  pod 'Material', '~> 2.8.1'
-  pod 'Decodable', '~> 0.5'
-  pod 'Ecno', '~> 1.0'
-  pod 'Whisper', '~> 5.0.0'
-  pod 'Eureka', '~> 3.1.0'
-  pod 'XLSwiftKit', '~> 2.0'
-  pod 'SwiftDate', '~> 4.1.6'
-  pod 'R.swift', '~> 3.3.0'
-  pod 'Birdsong', '~> 0.5.2'
+  pod 'OperaSwift',  '~> 3.0.1'
+  pod 'Charts', '~> 3.0.4'
+  pod 'Material', '~> 2.12.7'
+  pod 'Decodable', '~> 0.6'
+  pod 'Whisper', :git => 'https://github.com/hyperoslo/Whisper.git', branch: 'master'
+  pod 'Eureka', '~> 4.0'
+  pod 'XLSwiftKit', '~> 3.0'
+  pod 'SwiftDate', '~> 4.4.2'
+  pod 'R.swift', '~> 4.0'
+  pod 'Birdsong', '~> 0.6.0'
 
+end
+
+post_install do |installer|
+  puts 'Removing static analyzer support'
+  installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+          config.build_settings['OTHER_CFLAGS'] = "$(inherited) -Qunused-arguments -Xanalyzer -analyzer-disable-all-checks"
+          config.build_settings['SWIFT_VERSION'] = '4.0'
+      end
+  end
 end

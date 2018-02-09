@@ -1,63 +1,74 @@
 PODS:
-  - Alamofire (4.4.0)
-  - Birdsong (0.5.2):
-    - Starscream (= 2.0.1)
-  - Charts (3.0.2):
-    - Charts/Core (= 3.0.2)
-  - Charts/Core (3.0.2)
-  - Decodable (0.5)
-  - Ecno (1.0.0)
-  - Eureka (3.1.0)
-  - Material (2.8.1):
-    - Material/Core (= 2.8.1)
-  - Material/Core (2.8.1)
-  - OperaSwift (2.0.0):
-    - Alamofire (~> 4.4.0)
-    - RxCocoa (~> 3.4.0)
-    - RxSwift (~> 3.4.0)
-  - R.swift (3.3.0):
-    - R.swift.Library (~> 3.0.2)
-  - R.swift.Library (3.0.2)
-  - RxCocoa (3.4.1):
-    - RxSwift (~> 3.4)
-  - RxSwift (3.4.1)
-  - Starscream (2.0.1)
-  - SwiftDate (4.1.7)
-  - Whisper (5.0.0)
-  - XLSwiftKit (2.0.1)
+  - Alamofire (4.5.1)
+  - Birdsong (0.6.0):
+    - Starscream (= 3.0.2)
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
+  - Decodable (0.6.0)
+  - Eureka (4.0.1)
+  - Material (2.12.7):
+    - Material/Core (= 2.12.7)
+  - Material/Core (2.12.7):
+    - Motion (~> 1.2.0)
+  - Motion (1.2.4):
+    - Motion/Core (= 1.2.4)
+  - Motion/Core (1.2.4)
+  - OperaSwift (3.0.1):
+    - Alamofire (~> 4.5.1)
+    - RxCocoa (= 4.0.0)
+    - RxSwift (= 4.0.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - Starscream (3.0.2)
+  - SwiftDate (4.4.2)
+  - Whisper (6.0.0)
+  - XLSwiftKit (3.0.0)
 
 DEPENDENCIES:
-  - Birdsong (~> 0.5.2)
-  - Charts (~> 3.0.2)
-  - Decodable (~> 0.5)
-  - Ecno (~> 1.0)
-  - Eureka (~> 3.1.0)
-  - Material (~> 2.8.1)
-  - OperaSwift (~> 2.0)
-  - R.swift (~> 3.3.0)
-  - RxCocoa (~> 3.4)
-  - SwiftDate (~> 4.1.6)
-  - Whisper (~> 5.0.0)
-  - XLSwiftKit (~> 2.0)
+  - Birdsong (~> 0.6.0)
+  - Charts (~> 3.0.4)
+  - Decodable (~> 0.6)
+  - Eureka (~> 4.0)
+  - Material (~> 2.12.7)
+  - OperaSwift (~> 3.0.1)
+  - R.swift (~> 4.0)
+  - SwiftDate (~> 4.4.2)
+  - Whisper (from `https://github.com/hyperoslo/Whisper.git`, branch `master`)
+  - XLSwiftKit (~> 3.0)
+
+EXTERNAL SOURCES:
+  Whisper:
+    :branch: master
+    :git: https://github.com/hyperoslo/Whisper.git
+
+CHECKOUT OPTIONS:
+  Whisper:
+    :commit: 3c39eb404faf63782d47e607c87c4e275236779e
+    :git: https://github.com/hyperoslo/Whisper.git
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  Birdsong: 9ba3983693609813270fbb4aee5484abddc1ea30
-  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
-  Decodable: 7c90acc68d357b71d0d6efc120faf9c53c644b7e
-  Ecno: 196d1beec86a9177076dbae61393de452bbf34cc
-  Eureka: d6725c38d0dcdceaa331d1468f75e76315715ae0
-  Material: cc27757e6c91999ac41b2089769106a9d83364c0
-  OperaSwift: c545476deab7a43dab1ca6a273bdb6f79382688f
-  R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
-  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
-  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
-  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
-  Starscream: ce7a202d95615bd4113bc5a0f1932f1db8c808a4
-  SwiftDate: 029be76691ee89176da3a46c7df3415b6734bc5b
-  Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
-  XLSwiftKit: aaf29528b340180a5d7b9c7e226c0e8fe188f3f5
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Birdsong: beda6369ea7938b75e54c09ec3ab13f7c4c0483f
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  Decodable: f0b95fa2fcf8633dd097aa8f7f09838ab3524f5d
+  Eureka: c8bd5cc07143b6f66268c208d28a246c99b41955
+  Material: ffacedb0eda30ff80085afd79c3a6df054127cd1
+  Motion: ea6cc1d43e7b9c99819bfe91f6aee2500e208fc4
+  OperaSwift: 206d6c5b2f1c7de5551d9139f4826f68a2e5d645
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  Starscream: b512c62f6706421221b5ceb2ba01a9f58aca5bea
+  SwiftDate: 131cf2f09b390f0a07f0099e36005ffe2fbf4c7e
+  Whisper: e378cccfd5c65f159b434af7e22f26cfcac85354
+  XLSwiftKit: b81ac73d891f780a5a316ad710757e94a71bff81
 
-PODFILE CHECKSUM: 2935d75404052b6ebbd4f9adcde58cfa41e505b9
+PODFILE CHECKSUM: 89015c96ee4b460f1db7b7b430fd0ebca4abe437
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

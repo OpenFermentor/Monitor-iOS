@@ -12,7 +12,6 @@ import SwiftDate
 struct Reading {
     let temp: Double
     let ph: Double
-    let density: Double
     let insertedAt: Date
     let routineId: Int
     let id: Int
@@ -21,7 +20,6 @@ struct Reading {
         guard
             let temp = data["temp"] as? Double,
             let ph = data["ph"] as? Double,
-            let density = data["density"] as? Double,
             let insertedAt = data["inserted_at"] as? String,
             let routineId = data["routine_id"] as? Int,
             let id = data["id"] as? Int,
@@ -30,7 +28,7 @@ struct Reading {
             return nil
         }
 
-        return Reading(temp: temp, ph: ph, density: density, insertedAt: date, routineId: routineId, id: id)
+        return Reading(temp: temp, ph: ph, insertedAt: date, routineId: routineId, id: id)
     }
 
 }

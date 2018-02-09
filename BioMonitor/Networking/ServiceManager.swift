@@ -6,30 +6,38 @@
 //  Copyright © 2017 Open Fermentor. All rights reserved.
 //
 
-import Alamofire
 import Foundation
 import OperaSwift
+import Alamofire
+import RxSwift
 
-final class ServiceManager: RxManager {
 
-    public static let shared: ServiceManager = {
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
-        let sessionManager = Alamofire.SessionManager(configuration: configuration)
-        return ServiceManager(manager: sessionManager)
-    }()
+class ServiceManager: RxManager {
 
-    public override init(manager: Alamofire.SessionManager) {
+    static let shared = ServiceManager(manager: SessionManager.default)
+
+    override init(manager: Alamofire.SessionManager) {
         super.init(manager: manager)
         observers = [Logger()]
+        requestAdapter = AuthAdapter()
+        useMockedData = false
     }
+
+
 
 }
 
-public struct Logger: OperaSwift.ObserverType {
-
-    public func willSendRequest(_ alamoRequest: Alamofire.Request, requestConvertible: URLRequestConvertible) {
+struct Logger: OperaSwift.ObserverType {
+    func willSendRequest(_ alamoRequest: Alamofire.Request, requestConvertible: URLRequestConvertible) {
         debugPrint(alamoRequest)
     }
-    
+}
+
+class AuthAdapter: RequestAdapter {
+    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+        guard let token = UserController.shared.getAuthToken() else { return urlRequest }
+        var request = urlRequest
+        request.allHTTPHeaderFields?[Constants.Auth.authHeader] = token
+        return request
+    }
 }
