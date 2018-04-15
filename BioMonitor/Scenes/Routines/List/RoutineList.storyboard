@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7dL-B3-hmd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7dL-B3-hmd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +15,6 @@
         <scene sceneID="d9k-RA-anB">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="7dL-B3-hmd" customClass="RoutineListViewController" customModule="BioMonitor" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SWl-1g-Gx4"/>
-                        <viewControllerLayoutGuide type="bottom" id="VMP-oC-CkQ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TbC-y2-Rou">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,14 +52,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.30980392159999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="St3-D3-UfB" firstAttribute="top" secondItem="SWl-1g-Gx4" secondAttribute="bottom" id="3bM-P2-2ed"/>
+                            <constraint firstItem="St3-D3-UfB" firstAttribute="top" secondItem="YRJ-Wa-hda" secondAttribute="top" id="3bM-P2-2ed"/>
                             <constraint firstItem="lQT-XW-DU4" firstAttribute="top" secondItem="St3-D3-UfB" secondAttribute="bottom" constant="10" id="NXT-Hd-JWB"/>
-                            <constraint firstItem="lQT-XW-DU4" firstAttribute="centerX" secondItem="TbC-y2-Rou" secondAttribute="centerX" id="WBo-2X-8J6"/>
+                            <constraint firstItem="lQT-XW-DU4" firstAttribute="centerX" secondItem="YRJ-Wa-hda" secondAttribute="centerX" id="WBo-2X-8J6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="St3-D3-UfB" secondAttribute="trailing" constant="-16" id="d7F-OJ-94d"/>
                             <constraint firstItem="lQT-XW-DU4" firstAttribute="width" secondItem="TbC-y2-Rou" secondAttribute="width" id="jl6-ef-8gg"/>
                             <constraint firstItem="St3-D3-UfB" firstAttribute="leading" secondItem="TbC-y2-Rou" secondAttribute="leadingMargin" constant="-16" id="jvP-Cq-1dP"/>
-                            <constraint firstItem="VMP-oC-CkQ" firstAttribute="top" secondItem="lQT-XW-DU4" secondAttribute="bottom" id="rHW-Do-wYo"/>
+                            <constraint firstItem="YRJ-Wa-hda" firstAttribute="bottom" secondItem="lQT-XW-DU4" secondAttribute="bottom" id="rHW-Do-wYo"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="YRJ-Wa-hda"/>
                     </view>
                     <connections>
                         <outlet property="newRoutineBtn" destination="9J9-O7-JEj" id="G44-AR-DTN"/>

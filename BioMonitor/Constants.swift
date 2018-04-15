@@ -12,6 +12,8 @@ struct Constants {
     struct Network {
         static let baseUrl = URL(string:"https://bio-monitor-staging.herokuapp.com/api")!
         static let socketUrl = URL(string: "https://bio-monitor-staging.herokuapp.com/socket/websocket")!
+//        static let baseUrl = URL(string:"http://localhost:2000/api")!
+//        static let socketUrl = URL(string: "http://localhost:2000/socket/websocket")!
     }
 
     struct Auth {

@@ -16,7 +16,7 @@ struct Result: Decodable, OperaDecodable {
     let y: Double
 
     static func decode(_ json: Any) throws -> Result {
-        return try! Result(x: json => "x", y: json => "y")
+        return (try? Result(x: json => "x", y: json => "y")) ?? Result(x: 0.0, y: 0.0)
     }
 }
 

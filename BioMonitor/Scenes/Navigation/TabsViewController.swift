@@ -9,6 +9,13 @@
 import Material
 
 class TabsViewController: TabsController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+            tabBar.frame.origin.y -= view.safeAreaInsets.bottom
+        }
+    }
 
     open override func prepare() {
         super.prepare()

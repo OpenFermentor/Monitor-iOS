@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uUl-kE-9YL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uUl-kE-9YL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +14,6 @@
         <scene sceneID="ARj-3s-cXe">
             <objects>
                 <viewController id="uUl-kE-9YL" customClass="RoutineDetailViewController" customModule="BioMonitor" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wHe-rD-G1U"/>
-                        <viewControllerLayoutGuide type="bottom" id="fiO-kp-0p8"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ysJ-Os-8ZX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,10 +37,10 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUf-ru-fKA" customClass="LogView" customModule="BioMonitor" customModuleProvider="target">
-                                <rect key="frame" x="-0.5" y="112" width="375" height="555"/>
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="owD-ae-piN">
-                                        <rect key="frame" x="-0.5" y="0.0" width="375" height="555"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoQ-YP-tfX">
@@ -231,13 +228,13 @@
                                                 <rect key="frame" x="7" y="0.0" width="361" height="92.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQb-Pj-gzd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="51.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkJ-Xw-bcD">
-                                                        <rect key="frame" x="0.0" y="22.5" width="361" height="70"/>
+                                                        <rect key="frame" x="0.0" y="51.5" width="361" height="41"/>
                                                         <string key="text">asdfghjkgsgdsahjkgdjksagdkjsgdkjagsdkjasgdjkasgdkjasgdkjasgdjkasgdkjasgdkjasgdkjgasdkjgasdjkasgdkjagsjdkgasjkdgaskjdgaskjdgajkdgajksdgaksjdgajksdgjkasgdkajsgdkajs</string>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <color key="textColor" red="0.1333333333" green="0.30980392159999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -266,22 +263,23 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UJ8-zX-Q4I" firstAttribute="centerX" secondItem="ysJ-Os-8ZX" secondAttribute="centerX" id="1eX-lP-Uhf"/>
+                            <constraint firstItem="UJ8-zX-Q4I" firstAttribute="centerX" secondItem="Snw-5O-dOZ" secondAttribute="centerX" id="1eX-lP-Uhf"/>
                             <constraint firstItem="TUf-ru-fKA" firstAttribute="top" secondItem="kQJ-Iq-Gb7" secondAttribute="bottom" constant="10" id="EiJ-E3-KHh"/>
                             <constraint firstItem="kQJ-Iq-Gb7" firstAttribute="centerX" secondItem="ysJ-Os-8ZX" secondAttribute="centerX" id="Fdw-cy-tQF"/>
-                            <constraint firstItem="fiO-kp-0p8" firstAttribute="top" secondItem="UJ8-zX-Q4I" secondAttribute="bottom" constant="-1" id="GpD-If-v2k"/>
+                            <constraint firstItem="Snw-5O-dOZ" firstAttribute="bottom" secondItem="UJ8-zX-Q4I" secondAttribute="bottom" constant="-1" id="GpD-If-v2k"/>
                             <constraint firstItem="sHN-Cm-aF6" firstAttribute="width" secondItem="TUf-ru-fKA" secondAttribute="width" id="HXk-NK-vHP"/>
                             <constraint firstItem="UJ8-zX-Q4I" firstAttribute="width" secondItem="ysJ-Os-8ZX" secondAttribute="width" id="NT9-IV-ldz"/>
-                            <constraint firstItem="fiO-kp-0p8" firstAttribute="top" secondItem="o5H-QP-jKg" secondAttribute="bottom" id="a4q-er-Vcy"/>
-                            <constraint firstItem="o5H-QP-jKg" firstAttribute="centerX" secondItem="ysJ-Os-8ZX" secondAttribute="centerX" id="gJG-M4-RKJ"/>
-                            <constraint firstItem="fiO-kp-0p8" firstAttribute="top" secondItem="TUf-ru-fKA" secondAttribute="bottom" id="gcb-Yj-eh6"/>
+                            <constraint firstItem="Snw-5O-dOZ" firstAttribute="bottom" secondItem="o5H-QP-jKg" secondAttribute="bottom" id="a4q-er-Vcy"/>
+                            <constraint firstItem="o5H-QP-jKg" firstAttribute="centerX" secondItem="Snw-5O-dOZ" secondAttribute="centerX" id="gJG-M4-RKJ"/>
+                            <constraint firstItem="Snw-5O-dOZ" firstAttribute="bottom" secondItem="TUf-ru-fKA" secondAttribute="bottom" id="gcb-Yj-eh6"/>
                             <constraint firstItem="o5H-QP-jKg" firstAttribute="width" secondItem="ysJ-Os-8ZX" secondAttribute="width" id="jU5-Ac-Ua0"/>
-                            <constraint firstItem="kQJ-Iq-Gb7" firstAttribute="top" secondItem="wHe-rD-G1U" secondAttribute="bottom" constant="10" id="qHN-Tc-6Rx"/>
+                            <constraint firstItem="kQJ-Iq-Gb7" firstAttribute="top" secondItem="Snw-5O-dOZ" secondAttribute="top" constant="10" id="qHN-Tc-6Rx"/>
                             <constraint firstItem="TUf-ru-fKA" firstAttribute="centerX" secondItem="ysJ-Os-8ZX" secondAttribute="centerX" id="rdx-2a-cHI"/>
                             <constraint firstItem="o5H-QP-jKg" firstAttribute="top" secondItem="kQJ-Iq-Gb7" secondAttribute="bottom" constant="10" id="rh9-fc-SJT"/>
                             <constraint firstItem="UJ8-zX-Q4I" firstAttribute="top" secondItem="kQJ-Iq-Gb7" secondAttribute="bottom" constant="10" id="tb3-D3-H7a"/>
                             <constraint firstItem="TUf-ru-fKA" firstAttribute="width" secondItem="ysJ-Os-8ZX" secondAttribute="width" id="uHe-eJ-1uV"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Snw-5O-dOZ"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -327,11 +325,12 @@
                             <constraint firstItem="hH6-lx-mya" firstAttribute="centerY" secondItem="cn7-ua-O52" secondAttribute="centerY" id="7uH-4N-xoa"/>
                             <constraint firstItem="hH6-lx-mya" firstAttribute="centerX" secondItem="cn7-ua-O52" secondAttribute="centerX" id="8EU-64-xxJ"/>
                             <constraint firstItem="hH6-lx-mya" firstAttribute="height" secondItem="cn7-ua-O52" secondAttribute="height" id="ash-y0-tw9"/>
-                            <constraint firstItem="SLg-TQ-V0g" firstAttribute="centerX" secondItem="cn7-ua-O52" secondAttribute="centerX" id="j6b-fQ-qg4"/>
+                            <constraint firstItem="SLg-TQ-V0g" firstAttribute="centerX" secondItem="EtA-E0-kkJ" secondAttribute="centerX" id="j6b-fQ-qg4"/>
                             <constraint firstItem="hH6-lx-mya" firstAttribute="width" secondItem="cn7-ua-O52" secondAttribute="width" id="llF-T3-mBp"/>
                             <constraint firstItem="SLg-TQ-V0g" firstAttribute="width" secondItem="cn7-ua-O52" secondAttribute="width" id="mRv-Cv-lYg"/>
                             <constraint firstItem="SLg-TQ-V0g" firstAttribute="centerY" secondItem="cn7-ua-O52" secondAttribute="centerY" id="yS6-GJ-qav"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="EtA-E0-kkJ"/>
                     </view>
                     <connections>
                         <outlet property="messageLabel" destination="SLg-TQ-V0g" id="CaJ-W7-qdd"/>

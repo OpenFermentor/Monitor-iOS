@@ -32,6 +32,9 @@ class RoutineDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
         navigationController?.navigationBar.isHidden = false
         segmented.rx.value
             .asObservable()
@@ -56,7 +59,7 @@ class RoutineDetailViewController: UIViewController {
             vc.routineId = routine.id
         default:
             return
-        }
+        }   
     }
 
     private func stylize() {

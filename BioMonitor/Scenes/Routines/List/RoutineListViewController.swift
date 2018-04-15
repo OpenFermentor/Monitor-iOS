@@ -23,6 +23,9 @@ class RoutineListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
         prepareTabItem()
         tableView.backgroundColor = .white
         tableView.delegate = self
